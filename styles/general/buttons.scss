@@ -1,0 +1,28 @@
+.btn {
+	cursor: pointer;
+	outline: none;
+	font-family: $font-sans;
+	font-weight: 600;
+	font-size: 1rem;
+	border-radius: .25rem;
+	line-height: 1.2rem;
+	padding: .5rem 1rem .5rem;
+	margin-left: .5rem;
+	margin-right: .5rem;
+	border: none;
+
+	background-color: $dark-gray;
+	color: #fff;
+
+	&:hover {
+		background-color: lighten($color: $dark-gray, $amount: 20);
+	}
+   
+	&--submit {
+		background-color: $primary;
+		&:hover {
+			background-color: darken($color: $primary, $amount: 20);
+		}
+	}
+}
+

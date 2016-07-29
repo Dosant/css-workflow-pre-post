@@ -1,6 +1,7 @@
 <html>
 
 <head>
+	<link href="node_modules/reset-css/reset.css" rel="stylesheet" />
 	<link href="index.css" rel="stylesheet" />
 	<meta charset="utf8" />
 </head>
@@ -8,68 +9,69 @@
 <body>
 	<div class="app">
 		<header class="header">
-			<!--nav-->
+			<!-- nav here-->
 		</header>
-		<content class="content-wrapper">
-			<div class="content">
-				<header class="quiz-header">
-					<h1 class="quiz-header-title"> <strong class="sans">Бегун или прыгун?</strong> Попробуйте узнать российских легкоатлетов в лицо. Тест</h1>
-					<span class="close-icon"></span>
+		<content class="quiz-wrapper">
+			<div class="quiz">
+				<header class="quiz__header">
+					<h1 class="quiz__header-title"> <strong class="u-sans">Бегун или прыгун?</strong> Попробуйте узнать российских легкоатлетов в лицо. Тест</h1>
+					<span class="close-icon quiz__header-close-icon"></span>
 				</header>
-				<content class="quiz-content-wrapper">
-					<div class="quiz-content">
-						<div class="quiz-question-num-container">
-							<p class="quiz-question-num">2/9</p>
+				<content class="quiz__content-wrapper">
+					<div class="quiz__content">
+						<div class="quiz__question-num-container">
+							<p class="quiz__question-num">2/9</p>
 						</div>
-						<div class="quiz-question-content-wrapper">
-							<div class="quiz-question-img-wrapper">
-								<img src="./img.jpg" alt="quiestion" />
-								<p class="quiz-question-img-caption">Фото: Павел Головкин / AP / Scanpix / LETA</p>
+						<div class="quiz__question-content-wrapper">
+							<div class="quiz__question-img-wrapper">
+								<img class="quiz__question-img u-img-gray" src="./img.jpg" alt="quiestion"/>
+								<p class="quiz__question-img-caption">Фото: Павел Головкин / AP / Scanpix / LETA</p>
 							</div>
-							<h1 class="quiz-question-title sans">Начнем с самого простого. Перед вами двукратная олимпийская чемпионка. В каком виде спорта?</h1>
-							<form class="quiz-answers">
-								<div class="quiz-answer">
-									<div class="quiz-answer-pip">
-										<input type="radio" name="answer"/>
+							<h1 class="quiz__question-title">Начнем с самого простого. Перед вами двукратная олимпийская чемпионка. В каком виде спорта?</h1>
+							<form class="quiz__answers">
+								<div class="quiz__answer">
+									<div class="quiz__answer-pip">
+										<input class="quiz__answer-pip-checkbox" type="radio" name="answer"/>
 									</div>
-									<div class="quiz-answer-text">
+									<div class="quiz__answer-text">
 										В прыжках в длину, конечно
 									</div>
 								</div>
-								<div class="quiz-answer">
-									<div class="quiz-answer-pip">
-										<input type="radio" name="answer"/>
+								<div class="quiz__answer">
+									<div class="quiz__answer-pip">
+										<input class="quiz__answer-pip-checkbox" type="radio" name="answer"/>
 									</div>
-									<div class="quiz-answer-text">
+									<div class="quiz__answer-text">
 										В прыжках, но не в длину, а в высоту
 									</div>
 								</div>
-								<div class="quiz-answer">
-									<div class="quiz-answer-pip">
-										<input type="radio" name="answer"/>
+								<div class="quiz__answer">
+									<div class="quiz__answer-pip">
+										<input class="quiz__answer-pip-checkbox" type="radio" name="answer"/>
 									</div>
-									<div class="quiz-answer-text">
+									<div class="quiz__answer-text">
 										В высоту, но не просто в высоту, а с шестом
 									</div>
 								</div>
-								<div class="quiz-answer">
-									<div class="quiz-answer-pip">
-										<input type="radio" name="answer"/>
+								<div class="quiz__answer">
+									<div class="quiz__answer-pip">
+										<input class="quiz__answer-pip-checkbox" type="radio" name="answer"/>
 									</div>
-									<div class="quiz-answer-text">
+									<div class="quiz__answer-text">
 										Вы что?! Это же девушка, гениально бегающая 800-метровку
 									</div>
 								</div>
-								<div class="quiz-answers-footer">
-									<button class="quiz-submit-btn">Дальше</button>
+								<div class="quiz__answers-footer">
+									<button class="btn">Назад</button>
+									<button class="btn btn--submit">Дальше</button>
 								</div>
 							</form>
 						</div>
 					</div>
 				</content>
-				<footer class="quiz-footer">
-					<div class="quiz-footer-social-meta">
-						<p class="text-center">
+				<footer class="quiz__footer">
+					<div class="quiz__footer-social-meta">
+						<p class="u-text-al-c">
 							Здесь типа иконки соц сетей
 						</p>
 					</div>

@@ -1,0 +1,106 @@
+/* *****************************
+
+CSS
+
+******************************** */
+
+// # 1.
+
+.btn {
+  color: #c0ffee;
+  padding: 10px 14px;
+  border: 3px solid #c0ffee;
+}
+
+.btn-danger {
+	color: red;
+  padding: 10px 14px;
+  border: 3px solid #c0ffee;
+}
+
+.btn-submit {
+	color: green;
+}
+
+/*
+
+<button class="btn btn-danger">
+
+*/
+
+
+// #2.
+
+.btn,
+[class*="btn"] {
+  color: #c0ffee;
+  padding: 10px 14px;
+  border: 3px solid #c0ffee;
+}
+
+.btn-danger {
+	color: red;
+}
+
+.btn-submit {
+	color: green;
+}
+
+/*
+
+<button class="btn-danger">  -- works ! , but  .danger-btn -- is considered like btn.
+
+*/
+
+
+/* *****************************
+
+SASS
+
+******************************** */
+
+@mixin m-btn($color: #c0ffee) {
+	color: $color;
+	padding: 10px 14px;
+	border: 3px solid $color;
+}
+
+.btn {
+	@include m-btn();
+}
+
+.btn-danger {
+	@include m-btn(red);
+}
+
+.btn-submit {
+	@include m-btn(green);
+}
+
+
+/* output:
+
+.btn {
+  color: #c0ffee;
+  padding: 10px 14px;
+  border: 3px solid #c0ffee; }
+
+.btn-danger {
+  color: red;
+  padding: 10px 14px;
+  border: 3px solid red; }
+
+.btn-submit {
+  color: green;
+  padding: 10px 14px;
+  border: 3px solid green; }
+
+ */
+
+@mixin sexy-line-under{
+	border-bottom: 1px dashed #ffc0cb;
+}
+
+.some-element {
+	@include sexy-line-under;
+}

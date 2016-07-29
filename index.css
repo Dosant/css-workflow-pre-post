@@ -1,207 +1,201 @@
-/*
-	each browser different,
-	use a tool like https://necolas.github.io/normalize.css/
-	to reset common elements properties,
-	(already included in every css framework
-*/
+.u-sans {
+  font-family: "Proxima Nova", sans-serif; }
 
-html * {
-	margin: 0;
-	padding: 0;
-	border: 0;
-}
+.u-text-al-c {
+  text-align: center; }
 
-html {
-	/* You're responsible for custom fonts to be available in browser,
-	but we have fallback fonts if things get wrong;
-	*/
-	font-family: 'PF Regal Text Pro', Georgia, 'Times New Roman', Times, serif;
-}
-
-.sans {
-	font-family: 'Proxima Nova', sans-serif
-}
-
-.text-center {
-	text-align: center;
-}
-
-
-/*
-	flex is a modern way to display html elements,
-	in this case, we solve problem with sticky footer
-	please read: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-	(note: supported almost in every browser)
-*/
-
-.app {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-}
-
-.header {
-	height: 45px;
-	background-color: #262626;
-}
-
-.footer {
-	height: 150px;
-	background-color: #262626;
-}
-
-.content-wrapper {
-	display: flex;
-	flex: 1 0 auto;
-	background-color: #e6e6e6;
-	/* occupy all space possible beetwen header and footer*/
-}
-
-.content {
-	display: flex;
-	flex: 1;
-	flex-direction: column;
-	margin: 15px 0;
-	background-color: white;
-	box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
-}
-
-.quiz-header {
-	position: relative;
-	/* need this to absolutely place close-icon inside cont. */
-	height: 60px;
-	line-height: 50px;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.1)
-}
-
-.quiz-content-wrapper {
-	flex: 1;
-}
-
-.quiz-footer {
-	display: flex;
-	justify-content: center;
-	height: 60px;
-	line-height: 55px;
-	border-top: 1px solid rgba(0, 0, 0, 0.1)
-}
-
-.quiz-header-title {
-	font-size: 18px;
-	font-weight: 400;
-	text-align: center;
-}
+.u-img-gray {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%); }
 
 .close-icon {
-	cursor: pointer;
-	width: 20px;
-	height: 20px;
-	background-image: url('./cross.svg');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 16px
-}
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background-image: url("./cross.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px; }
 
-.quiz-header>.close-icon {
-	position: absolute;
-	top: 12px;
-	right: 24px;
-}
+.btn {
+  cursor: pointer;
+  outline: none;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: .25rem;
+  line-height: 1.2rem;
+  padding: .5rem 1rem .5rem;
+  margin-left: .5rem;
+  margin-right: .5rem;
+  border: none;
+  background-color: #262626;
+  color: #fff; }
+  .btn:hover {
+    background-color: #595959; }
+  .btn--submit {
+    background-color: #b88b58; }
+    .btn--submit:hover {
+      background-color: #775733; }
+
+.header {
+  height: 4rem;
+  background-color: red; }
+
+.footer {
+  height: 10rem;
+  background-color: #262626; }
+
+.quiz-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  background-color: #e6e6e6;
+  /* occupy all space possible beetwen header and footer*/ }
+
+.quiz {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1rem 0;
+  background-color: #fff;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2); }
+
+.quiz__header {
+  position: relative;
+  /* need this to absolutely place close-icon inside cont. */
+  height: 4.5rem;
+  line-height: 4.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+
+.quiz__content-wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
+
+.quiz__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 4.5rem;
+  line-height: 4.6rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1); }
+
+.quiz__header-title {
+  font-size: 1.33rem;
+  font-weight: 400;
+  text-align: center; }
+
+.quiz__header-close-icon {
+  position: absolute;
+  top: 12px;
+  right: 24px; }
 
 .quiz-footer-social-meta {
-	width: 300px;
-	/* for example: you will have particular width for social icon */
-}
+  width: 300px;
+  /* for example: you will have particular width for social icon */ }
 
-.quiz-content {
-	max-width: 610px;
-	padding: 20px 0;
-	margin: auto;
-}
+.quiz__content {
+  max-width: 45rem;
+  padding: 1.5rem 0;
+  margin: auto; }
 
-.quiz-question-num-container {
-	font-size: 18px;
-	line-height: 18px;
-	margin-bottom: 12px
-}
+.quiz__question-num-container {
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  margin-bottom: 1rem; }
 
-.quiz-question-num {
-	font-weight: 800;
-	text-align: center;
-	color: #b3b3b3;
-}
+.quiz__question-num {
+  font-weight: 800;
+  text-align: center;
+  color: #b3b3b3; }
 
-.quiz-question-content-wrapper > * {
-	margin-top: 6px;
-}
+.quiz__question-content-wrapper > * {
+  margin-top: .5rem; }
 
-.quiz-question-img-wrapper,
-.quiz-question-img-wrapper>img {
-	width: 100%
-}
+.quiz__question-img-wrapper,
+.quiz__question-img {
+  width: 100%; }
 
-.quiz-question-img-caption {
-	text-align: right;
-	font-size: 12px;
-	line-height: 14px;
-	color: #999;
-	margin-top: 6px;
-}
+.quiz__question-img-caption {
+  text-align: right;
+  font-size: .8rem;
+  line-height: 1rem;
+  color: #b3b3b3;
+  margin-top: .5rem; }
 
-.quiz-question-title {
-	font-size: 21px;
-	line-height: 25px;
-	margin-top: 16px;
-}
+.quiz__question-title {
+  font-size: 1.5rem;
+  line-height: 1.6rem;
+  margin-top: 1.1rem; }
 
-.quiz-answers {
-	margin-top: 16px;
-}
+.quiz__answers {
+  margin-top: 1.1rem; }
 
-.quiz-answer {
-	display: flex;
-	padding: 15px;
-	border-top: 1px solid #e6e6e6
-}
+.quiz__answer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem;
+  border-top: 1px solid #e6e6e6; }
 
-.quiz-answer:last-child {
-	border-bottom: 1px solid #e6e6e6
-}
+.quiz__answer:last-child {
+  border-bottom: 1px solid #e6e6e6; }
 
-.quiz-answer-pip {
-	flex: 0 0 auto;
-	width: 20px;
-	height: 20px;
-}
+.quiz__answer-pip {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 20px;
+  height: 20px; }
 
-.quiz-answer-pip > input {
-	position: relative;
-	top: 4px;
-}
+.quiz__answer-pip-checkbox {
+  position: relative; }
 
-.quiz-answer-text {
-	flex: 2 1 auto;
-	font-size: 20px;
-	font-weight: 500;
-	color: #404040
-}
+.quiz__answer-text {
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1 auto;
+          flex: 2 1 auto;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #262626;
+  padding-left: 8px; }
 
-.quiz-answers-footer {
-	display: flex;
-	justify-content: center;
-	margin-top: 24px;
-}
+.quiz__answers-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 24px; }
 
-.quiz-submit-btn {
-	cursor: pointer;
-	outline: none;
-	font-family: 'Proxima Nova', sans-serif;
-	background: #b88b58;
-	border-radius: 4px;
-	font-weight: 600;
-	font-size: 14px;
-	color: #fff;
-	line-height: 17px;
-	border: none;
-	padding: 8px 12px 7px;
-}
+html {
+  font-size: 15px; }
+
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  font-family: "PF Regal Text Pro", Georgia, "Times New Roman", Times, serif;
+  font-size: 15px; }
+
+/*# sourceMappingURL=index.css.map */

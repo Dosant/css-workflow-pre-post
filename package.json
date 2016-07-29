@@ -1,0 +1,32 @@
+{
+  "name": "css-workflow-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Dosant@github.com/Dosant/simpleFlexExample.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dosant/simpleFlexExample/issues"
+  },
+  "homepage": "https://github.com/Dosant/simpleFlexExample#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.3.7",
+    "browser-sync": "^2.13.0",
+    "doiuse": "^2.4.1",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.1.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "node-sass": "^3.8.0"
+  },
+  "dependencies": {
+    "reset-css": "^2.0.20160720"
+  }
+}

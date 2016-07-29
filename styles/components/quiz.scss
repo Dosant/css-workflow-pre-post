@@ -1,0 +1,131 @@
+.quiz-wrapper {
+	display: flex;
+	flex: 1 0 auto;
+	background-color: $light-gray;
+	/* occupy all space possible beetwen header and footer*/
+}
+
+.quiz {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	margin: 1rem 0;
+	background-color: $white;
+	box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.quiz__header {
+	position: relative;
+	/* need this to absolutely place close-icon inside cont. */
+	height: 4.5rem;
+	line-height: 4.5rem;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+}
+
+.quiz__content-wrapper {
+	flex: 1;
+}
+
+.quiz__footer {
+	display: flex;
+	justify-content: center;
+	height: 4.5rem;
+	line-height: 4.6rem;
+	border-top: 1px solid rgba(0, 0, 0, 0.1)
+}
+
+.quiz__header-title {
+	font-size: 1.33rem;
+	font-weight: 400;
+	text-align: center;
+}
+
+.quiz__header-close-icon {
+	position: absolute;
+	top: 12px;
+	right: 24px;
+}
+
+.quiz-footer-social-meta {
+	width: 300px;
+	/* for example: you will have particular width for social icon */
+}
+
+.quiz__content {
+	max-width: 45rem;
+	padding: 1.5rem 0;
+	margin: auto;
+}
+
+.quiz__question-num-container {
+	font-size: 1.2rem;
+	line-height: 1.2rem;
+	margin-bottom: 1rem;
+}
+
+.quiz__question-num {
+	font-weight: 800;
+	text-align: center;
+	color: $medium-gray;
+}
+
+.quiz__question-content-wrapper > * {
+	margin-top: .5rem;
+}
+
+.quiz__question-img-wrapper,
+.quiz__question-img {
+	width: 100%
+}
+
+.quiz__question-img-caption {
+	text-align: right;
+	font-size: .8rem;
+	line-height: 1rem;
+	color: $medium-gray;
+	margin-top: .5rem;
+}
+
+.quiz__question-title {
+	font-size: 1.5rem;
+	line-height: 1.6rem;
+	margin-top: 1.1rem;
+}
+
+.quiz__answers {
+	margin-top: 1.1rem;
+}
+
+.quiz__answer {
+	display: flex;
+	padding: 1rem;
+	border-top: 1px solid $light-gray;
+}
+
+.quiz__answer:last-child {
+	border-bottom: 1px solid $light-gray;
+}
+
+.quiz__answer-pip {
+	flex: 0 0 auto;
+	width: 20px;
+	height: 20px;
+}
+
+.quiz__answer-pip-checkbox{
+	position: relative;
+}
+
+.quiz__answer-text {
+	flex: 2 1 auto;
+	font-size: 1.4rem;
+	font-weight: 500;
+	color: $dark-gray;
+	padding-left: 8px;
+}
+
+.quiz__answers-footer {
+	display: flex;
+	justify-content: center;
+	margin-top: 24px;
+}
